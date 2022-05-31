@@ -1,0 +1,115 @@
+:root {
+    --negro: #000000;
+    --gris_oscuro: #32302F;
+    --gris_claro: #504D4D;
+    --blanco: #E2E1E1;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0 , 0, .97);
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+#logo {
+    font-family: 'Odibee Sans', cursive;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    border-radius: 1rem;
+    font-size: 3.8rem;
+    margin-left: 2rem;
+}
+
+.navegacion>ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+.navegacion>ul>li>a {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+}
+
+.navegacion>ul>li:hover {
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    background-color: var(--negro);
+    display: flex;
+    height: 87vh;
+    width: 100%;
+}
+
+.img_container {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.text_profile_container {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),url(img/pexels-negative-space-160107.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0 , 0, .97);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile h2 {
+    color: var(--blanco);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 3.8rem;
+    z-index: 10;
+    text-align: center;
+}
+
+.profile_picture {
+    width: 40rem;
+    height: 30rem;
+}
