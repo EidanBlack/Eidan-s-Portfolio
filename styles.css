@@ -8,11 +8,13 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--negro);
 }
 
 *,
@@ -20,6 +22,28 @@ body {
 *::after {
     box-sizing: inherit;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 1.3rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--negro);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    /*background: #888;*/
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    border-radius: 0.8rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(175, 66, 97, 1);
+  }
 
 a {
     text-decoration: none;
@@ -30,11 +54,15 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    /*margin: 0;
+    padding: 0;*/
     background-color: rgba(0, 0, 0, .97);
     backdrop-filter: blur(10px);
     width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+
 }
 
 #logo {
@@ -81,6 +109,14 @@ a {
     display: flex;
     height: 87vh;
     width: 100%;
+    /*margin-top: 8.8rem;*/
+    margin-bottom: 8.8rem;
+}
+
+@media (max-width: 600px) {
+    #profile {
+        flex-direction: column-reverse;
+    }
 }
 
 .img_container {
@@ -99,6 +135,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 99vh;
 }
 
 .text_profile_container h2 {
@@ -165,4 +202,13 @@ a {
     background-color: var(--negro);
     width: 100%;
     height: 90vh;
+}
+
+.about_title {
+    color: var(--blanco);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 3.5rem;
 }
